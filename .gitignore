@@ -1,0 +1,24 @@
+# --- secrets / device-specific (NEVER commit) ---
+cred.txt
+scripts/cred.txt
+ec312_cred.txt
+
+# --- vendor binaries (do NOT redistribute; download from CODESYS Store) ---
+*.deb
+*.ipk
+*.package
+docker/*.deb
+
+# --- CODESYS project artifacts (generated; may contain IPs) ---
+*.project
+*.project~
+*.~u
+**/_project_backup/
+
+# --- runtime / temp output ---
+cds_result.txt
+*.log
+
+# --- python ---
+__pycache__/
+*.pyc

@@ -1,0 +1,18 @@
+# Run the CODESYS Control runtime container on the EC312.
+# Build first: docker build -t codesyscontrol:4.22 .
+# (the .deb must be present next to the Dockerfile — see Dockerfile header)
+services:
+  codesys:
+    build: .
+    image: codesyscontrol:4.22
+    container_name: cds422
+    # host networking so the runtime's 11740/1217 are reachable on the device IP,
+    # privileged so it can access host device-specific resources.
+    network_mode: host
+    privileged: true
+    restart: unless-stopped
+    # Optional: persist runtime data (licenses, retains) across container re-creation.
+    # volumes:
+    #   - codesys_data:/var/opt/codesys
+# volumes:
+#   codesys_data:

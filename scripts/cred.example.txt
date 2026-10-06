@@ -1,0 +1,10 @@
+# Copy this file to `cred.txt` (git-ignored) and fill in your device's values.
+# Format: one value per line, in this exact order.
+#   line 1: host        e.g. 192.168.1.100
+#   line 2: user        e.g. edge
+#   line 3: password    your device SSH password
+#   line 4: port        optional, default 22
+192.168.1.100
+edge
+CHANGE_ME
+22
